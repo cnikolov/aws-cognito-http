@@ -25,8 +25,8 @@ npm run dev
 ![](https://github.com/cnikolov/aws-cognito-http/blob/main/assets/7.png)
 ### 9. Next two steps you can skip and finally you will see some thing like this
 ![](https://github.com/cnikolov/aws-cognito-http/blob/main/assets/8.png)
-### 10. Create .env file and save your Pool Id, App client id and Pool region
-#### .env file in the root folder
+### 10. Rename sample.env to .env in your root folder
+#### Fill the variables with the one from your aws.
 
 # Try it out with Postman
 Import the profile in postman and test on your own pace.
