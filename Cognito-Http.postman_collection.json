@@ -1,0 +1,769 @@
+{
+  "info": {
+    "_postman_id": "2d74929f-9566-4696-a30f-ed35c05cad63",
+    "name": "CognitoHttp",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\":\"test@ad.com\",\r\n    \"password\":\"Testtest123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serverUrl}}/auth/login",
+          "host": ["{{serverUrl}}"],
+          "path": ["auth", "login"]
+        }
+      },
+      "response": [
+        {
+          "name": "Success",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"test@ad.com\",\r\n    \"password\":\"Testtest123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{serverUrl}}/auth/login",
+              "host": ["{{serverUrl}}"],
+              "path": ["auth", "login"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:3000"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "key": "Set-Cookie",
+              "value": "token=eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.l4wNThcinPSNVsBkqBYMJfbgX3a0dxuzycqpIpl1Hk48jg4r9caeXyoSIK9QErNtArEZq8FfGxX0ECbKZy3nz-pCXfHGSqVf_6MkUZyvlVIvP1R-iR8xkANifxDaqkfe86VqKnKnh2RTcWW2igHFGnLSWabl0ThqIxnNAkNYsGBT0TYId1IzVO6YOjSpOZr-76OcemcBfRJ4DMs4TeNXBVfXbS4bjCd1glggZ0kRbCkRLhHNBgqAM8laAMPL8uiDHQ0EVTbBKE03aaUy-bEfmuB963U65Xc7SOLSDU0h2SiXa9p-dm1gvjN7UlYdQ0IxvJR9A2bC1dF8rMFejiGwQQ.vY650S4cjvWo4rt6.2GPws790cHnBDBYP1HlqDxGQVvpcYO3NYrNPvYrnJORj0YVhesEGy0GNdrxSG8OXbhYTfLxC8VOGnCeYZdvVyEJTUrJOOEb9eWK73pOIesMlipsYKKPMBHXZM-5w44yjLVFpJdpDxRnf_7zF7BQhyfYpeW_ZU6L2yDwWMTILuzGBDzwddEgoGdMb9cygsnbXOa1Dd5Hm5pl5tO8u6RF6a6G3QeRjUeerAVG-MrIjcawsvjt5bkQDH00ymIjunsMeA8IlqDctOANAbmPw-7qXhef0A0RNDEre_K4nGgaafUX_IvbtwUoWhDYdU5CNP07_Mv3cn29SKD0KOL6gdjHMz1Li2h8h0h3sZn-c5yMLEwBMIQ_L4zYFrP_NzHdsSZRFrru9IU-Xrfrxc_kYH6zM790oULYTdaMG4PHB_iSGNGZqWFC_usmJkNNOD1Gsbf-ZmX8TSGOPqmScVGXiuvgdjllRMeARg77JDVmTdPMUeabj17cZgWK3j9LowvMzajlFpKJx0jodriiHJvplQEF9zE1DL9NPWy6V0BHg2KcYZ_LDGRaxW9w2lNZJLBLFIqHshauhDYscPA-0bZ1a6KxqPSQhZ-Yn_VICr4BOqR7naAF2NeykLkp0tWc1FTzCV_1JmUIC6GcjFffm1SrQelwvgwo82MFB7BqZ-Oxt4FlsAz4DLsbtKKQ7NxbJ-4UY0XgBJ5H0tiAYraayI-QvWmAt65bV4POsmTGH0pepZx8ithfZQPX_3d91CFVZQ-SuhlVwlE56FADZGxbiujvNDIrAt2biRI-mEc7RuULSUolVJBHieieot1gvTp83LnAY_MogjAudrsN-HvH4je3YYIi8X6f4t2osFh7xGYsPesGMk8sW56lgOYerQmSA1a14V38-jI21PDUrETN11Uc8OcSvqGSx1g7SVqCJQbKGbgymQ4TTDXwF6D1dgLPhLO_WWxB6Luju_70kF79eFyoH7_1ylw-LPBuXSH_M-pvAtZzcW227lkGXTQfTt2FLTtkzDgw-I5tFkfvQQayciOpXfANGlVbDGFjppG5dxeiHirveUnwK-E4mDNyvz_9-k0k_YlAWGLBTgby7UoNBlhqgsl1qNXrC0Uqi8vqoKf-XtIfRwqSY6ToS4VteCIb6Dla9A2vFw4wSeFQCCu8Dx5MiEl2lRhSS44dsVuLEB1i6mbdj2Nzh5nEA5kVjjilvb5RbUGfG8gRDAz1nyLMwtAz1-pvY-tWCOeZ80bOPSMqH0jMMHOhxTkiP3lp3TNTJ1-WnfYS8Ht8dSspaDXPLpmQCQZ9XiP3fb-bFZsu8oAnCrK0qL9HeYzxSbJociOcIbSI.X0o3rcnfyhSakTG-pE8LQQ; Path=/; Expires=Thu, 11 Mar 2021 23:00:49 GMT; HttpOnly"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1096"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"448-NOpr4jSrjdWvsc5D5dwE7uF4JQg\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 09 Feb 2021 23:00:52 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"jwt\": \"eyJraWQiOiJRMlNvOEdQaVdnS29ZOHRcLzU5XC9wbjA1ejF3bWJQbEJJVW9JVVQ4aHNLWE09IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI4NmIxYmMzNS1mMmNmLTQ3NTgtOGIzMS1lY2YwZWY1MzQwMWMiLCJldmVudF9pZCI6ImU5M2VhMWQ3LTQyMGYtNDZiNC1hYmMxLTMzM2U0Zjg3YzVmYiIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE2MTI5MTE2NDksImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC5ldS13ZXN0LTEuYW1hem9uYXdzLmNvbVwvZXUtd2VzdC0xX01NZERSR2tOdyIsImV4cCI6MTYxMjkxNTI0OSwiaWF0IjoxNjEyOTExNjQ5LCJqdGkiOiJiOTc2NjM0OS01ZWZkLTQwYzItYjZlMi1mOTI2ZWUyYWEwYmMiLCJjbGllbnRfaWQiOiI3anBoYWkxMDM0Z2FpaWliYWZycmN0dWMyMiIsInVzZXJuYW1lIjoiODZiMWJjMzUtZjJjZi00NzU4LThiMzEtZWNmMGVmNTM0MDFjIn0.YHKQ3m9pmiMYd6VA_PaFGNlK28UKecdhUHr1hkTDZ8dtfZH0xco-EDQmVW4Rquuc4-EVGH_-ypVnq3WWdpmmUaZipeQM42aC4vUYAtyyHwcmU5TNMEVr4P7uQAhTZEoP4_vmr66T3kP_Eo07-aVdfT8aZTOEmoqQw5aemhZGt7vyZ8nlPEQtxMwII0TzfxLah7QbdND_po9Jx8NKEA8o1TCddV0Mt8Ny_C4RB_b2uLKDxzKzfec4vR7I0_4Dj8IXJGni81s849J0x_1BpViTbQaZyyc52yPUaNGb4SxS82EN_u01bk1K351nCLIRTMASkWD2VAM8gU89Nue6gZ6emw\",\n    \"jwt_expired\": \"2021-02-10T00:00:49.000Z\",\n    \"email\": \"test@test.com\"\n}"
+        },
+        {
+          "name": "Error",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"test@test.com\",\r\n    \"password\":\"Testtest123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{serverUrl}}/auth/login",
+              "host": ["{{serverUrl}}"],
+              "path": ["auth", "login"]
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:3000"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "116"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"74-WQzu1KLrKor6mfaelCq0drM50Bc\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 09 Feb 2021 22:57:42 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"error\": {\n        \"code\": \"UserNotConfirmedException\",\n        \"name\": \"UserNotConfirmedException\",\n        \"message\": \"User is not confirmed.\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\":\"test@test.com\",\r\n    \"password\":\"Testtest123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serverUrl}}/auth/register",
+          "host": ["{{serverUrl}}"],
+          "path": ["auth", "register"]
+        }
+      },
+      "response": [
+        {
+          "name": "Success",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"test@test.com\",\r\n    \"password\":\"Testtest123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{serverUrl}}/auth/register",
+              "host": ["{{serverUrl}}"],
+              "path": ["auth", "register"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:3000"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "40"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"28-yk17Z8v27uMcuFVVpYUjfGtelHQ\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 09 Feb 2021 22:57:30 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"user\": \"test@test.com\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Confirm",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\":\"test@test.com\",\r\n    \"code\":\"\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serverUrl}}/auth/confirm",
+          "host": ["{{serverUrl}}"],
+          "path": ["auth", "confirm"]
+        }
+      },
+      "response": [
+        {
+          "name": "Success",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"test@test.com\",\r\n    \"code\":\"145438\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{serverUrl}}/auth/confirm",
+              "host": ["{{serverUrl}}"],
+              "path": ["auth", "confirm"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:3000"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "16"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 09 Feb 2021 22:59:15 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true\n}"
+        },
+        {
+          "name": "Error",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"test@test.com\",\r\n    \"code\":\"145438\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{serverUrl}}/auth/confirm",
+              "host": ["{{serverUrl}}"],
+              "path": ["auth", "confirm"]
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:3000"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "65"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"41-8YHTdHDQ26z6f1xmSapEqxv0AaU\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 09 Feb 2021 23:00:03 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"error\": \"User cannot be confirmed. Current status is CONFIRMED\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Refresh Token",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"token\": {{Token}}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serverUrl}}/auth/refresh-token",
+          "host": ["{{serverUrl}}"],
+          "path": ["auth", "refresh-token"]
+        }
+      },
+      "response": [
+        {
+          "name": "Error",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"test@test.com\",\r\n    \"code\":\"145438\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{serverUrl}}/auth/confirm",
+              "host": ["{{serverUrl}}"],
+              "path": ["auth", "confirm"]
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:3000"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "65"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"41-8YHTdHDQ26z6f1xmSapEqxv0AaU\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 09 Feb 2021 23:00:03 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"error\": \"User cannot be confirmed. Current status is CONFIRMED\"\n}"
+        },
+        {
+          "name": "Success",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"test@test.com\",\r\n    \"code\":\"145438\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{serverUrl}}/auth/confirm",
+              "host": ["{{serverUrl}}"],
+              "path": ["auth", "confirm"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:3000"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "16"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 09 Feb 2021 22:59:15 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true\n}"
+        }
+      ]
+    },
+    {
+      "name": "User",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serverUrl}}/auth/user",
+          "host": ["{{serverUrl}}"],
+          "path": ["auth", "user"]
+        }
+      },
+      "response": [
+        {
+          "name": "Error",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"test@test.com\",\r\n    \"code\":\"145438\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{serverUrl}}/auth/confirm",
+              "host": ["{{serverUrl}}"],
+              "path": ["auth", "confirm"]
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:3000"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "65"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"41-8YHTdHDQ26z6f1xmSapEqxv0AaU\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 09 Feb 2021 23:00:03 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"error\": \"User cannot be confirmed. Current status is CONFIRMED\"\n}"
+        },
+        {
+          "name": "Success",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"test@test.com\",\r\n    \"code\":\"145438\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{serverUrl}}/auth/confirm",
+              "host": ["{{serverUrl}}"],
+              "path": ["auth", "confirm"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:3000"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "16"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 09 Feb 2021 22:59:15 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true\n}"
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "serverUrl",
+      "value": "localhost:3001"
+    },
+    {
+      "key": "Token",
+      "value": "eyJraWQiOiJRMlNvOEdQaVdnS29ZOHRcLzU5XC9wbjA1ejF3bWJQbEJJVW9JVVQ4aHNLWE09IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI4NmIxYmMzNS1mMmNmLTQ3NTgtOGIzMS1lY2YwZWY1MzQwMWMiLCJldmVudF9pZCI6ImZlYzBkMmM0LTYzMWItNDEyZi1iZGZlLTMzOTJiZmM2NDQ2YSIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE2MTI5MTIxNDMsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC5ldS13ZXN0LTEuYW1hem9uYXdzLmNvbVwvZXUtd2VzdC0xX01NZERSR2tOdyIsImV4cCI6MTYxMjkxNTc0MywiaWF0IjoxNjEyOTEyMTQzLCJqdGkiOiJhZDg4Y2ZiZC03OGYwLTQwOWEtYjQ0NC0yODA1NzAwZjQ4MzciLCJjbGllbnRfaWQiOiI3anBoYWkxMDM0Z2FpaWliYWZycmN0dWMyMiIsInVzZXJuYW1lIjoiODZiMWJjMzUtZjJjZi00NzU4LThiMzEtZWNmMGVmNTM0MDFjIn0.VUE50F2wk2KnE2QMDV427TXJwPsfQ6eQdNbA5kaOrXgQj_1_MXtWbn_MNbzD99ikDNwor7B-Tryr0QMRtTEcXN1uuG_rehzVrwjZxuOokthL48NmcvaYuUwEoQ6Eh1JSxDScY0WVp_BQi7y4NCgxaygJ1x76FmLP9Vf0pqAcujum6lAtl6TDmqXTK-dh3iW8OUGARIAjlDv1JftoZ0RKHn2m9rEh6TwpLXesMBZXP6dh1YA3Iy8M_YxtEgpwQTUHEDPiM9hEnk-uIGLzcosvisHEcrjQtMHHFGmtbedcNc5CggLRij_MaDngPtEespuvONfruArDaQh2-o69LubC_w"
+    }
+  ]
+}
